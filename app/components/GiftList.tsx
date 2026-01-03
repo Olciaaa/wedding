@@ -295,7 +295,7 @@ export default function GiftList() {
                 Ustaw hasło (do anulowania rezerwacji):
               </label>
               <input
-                type="password"
+                type="text"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-2 border-2 border-pastel-pink/30 rounded-lg focus:border-pastel-rose focus:outline-none"
@@ -355,7 +355,7 @@ export default function GiftList() {
                 Hasło:
               </label>
               <input
-                type="password"
+                type="text"
                 value={cancelPassword}
                 onChange={(e) => {
                   setCancelPassword(e.target.value);
