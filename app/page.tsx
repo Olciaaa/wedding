@@ -58,9 +58,11 @@ export default function Home() {
               <h3 className="font-serif text-2xl text-pastel-rose mb-4">
                 Ceremonia
               </h3>
-              <p className="text-foreground/80 mb-2">Kościół w Tomaszowicach</p>
+              <p className="text-foreground/80 mb-2">
+                Kościół św. Piotra i Pawła w Tyńcu
+              </p>
               <p className="text-foreground/60 text-sm mb-4">
-                ul. Kościelna, Tomaszowice
+                ul. Benedyktyńskan 37, Kraków
               </p>
               <p className="text-lg font-semibold text-pastel-rose">15:00</p>
             </div>
@@ -75,7 +77,7 @@ export default function Home() {
               <p className="text-foreground/60 text-sm mb-4">
                 ul. Parkowa 12, Tomaszowice
               </p>
-              <p className="text-lg font-semibold text-pastel-rose">17:00</p>
+              <p className="text-lg font-semibold text-pastel-rose">17:30</p>
             </div>
           </div>
         </div>
@@ -90,11 +92,16 @@ export default function Home() {
           <div className="space-y-6">
             {[
               { time: "15:00", event: "Ceremonia ślubna", icon: "💒" },
-              { time: "16:00", event: "Sesja zdjęciowa", icon: "📸" },
-              { time: "17:00", event: "Przywitanie gości", icon: "🥂" },
+              {
+                time: "16:00",
+                event: "Grupowa sesja zdjęciowa",
+                icon: "📸",
+              },
+              { time: "16:30", event: "Życzenia", icon: "💝" },
+              { time: "17:30", event: "Powitanie i toast", icon: "🥂" },
               { time: "18:00", event: "Obiad weselny", icon: "🍽️" },
-              { time: "20:00", event: "Pierwszy taniec", icon: "💃" },
-              { time: "21:00", event: "Zabawa do białego rana", icon: "🎉" },
+              { time: "19:00", event: "Pierwszy taniec", icon: "💃" },
+              { time: "19:30", event: "Zabawa do białego rana", icon: "🎉" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -186,6 +193,11 @@ export default function Home() {
             Jeśli jednak ktoś z Was zastanawia się co nam podarować,
             przygotowaliśmy pomocniczą listę rzeczy, które z pewnością przydadzą
             się w nowym mieszkaniu.
+            <br />
+            Proszę nie używajcie tutaj żadnych ważnych i poważnych haseł,
+            ponieważ nie mamy wdrożonych żadnych zabezpieczeń. Hasła tutaj służą
+            tylko do braku przypadkowego anulowania rezerwacji przez kogoś
+            innego, mogą być nawet jedną literą.
           </p>
           <GiftList />
         </div>
