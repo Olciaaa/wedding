@@ -85,7 +85,7 @@ async function apiPost(payload: {
 }) {
   const res = await fetch(API_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
     body: JSON.stringify(payload),
   });
   const data = await res.json().catch(() => ({}));
@@ -119,7 +119,6 @@ export default function GiftList() {
       const remote = await apiGet();
       setGifts((prev) => mergeRemote(prev, remote));
     } catch (e) {
-      // na stronie weselnej nie musi straszyć — logujemy w konsoli
       console.error("Failed to refresh gifts:", e);
     }
   };
@@ -291,6 +290,9 @@ export default function GiftList() {
 
             <div className="mb-6">
               <label className="block text-sm font-medium text-foreground/80 mb-2">
+                Prosimy nie używać ważnych haseł. Hasło służy jedynie do ochrony
+                przed przypadkowym anulowaniem rezerwacji.
+                <br />
                 Ustaw hasło (do anulowania rezerwacji):
               </label>
               <input

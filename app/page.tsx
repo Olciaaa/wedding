@@ -193,11 +193,6 @@ export default function Home() {
             Jeśli jednak ktoś z Was zastanawia się co nam podarować,
             przygotowaliśmy pomocniczą listę rzeczy, które z pewnością przydadzą
             się w nowym mieszkaniu.
-            <br />
-            Proszę nie używajcie tutaj żadnych ważnych i poważnych haseł,
-            ponieważ nie mamy wdrożonych żadnych zabezpieczeń. Hasła tutaj służą
-            tylko do braku przypadkowego anulowania rezerwacji przez kogoś
-            innego, mogą być nawet jedną literą.
           </p>
           <GiftList />
         </div>
