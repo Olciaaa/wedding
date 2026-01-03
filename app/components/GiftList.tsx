@@ -28,29 +28,28 @@ const initialGifts: Gift[] = [
     id: 4,
     name: "Zestaw garnków",
     icon: "🍳",
-    description: "indukcja",
+    description: "działące na indukcji",
     reserved: false,
   },
-  { id: 5, name: "Thermomix", icon: "🤖", reserved: false },
   {
-    id: 6,
+    id: 5,
     name: "Zestaw ręczników",
     icon: "🧺",
-    description: "kolorysyka TODO",
     reserved: false,
   },
-  { id: 7, name: "", icon: "🧺", reserved: false },
-  { id: 8, name: "", icon: "🖼️", reserved: false },
-  { id: 9, name: "", icon: "🪴", reserved: false },
-  { id: 10, name: "", icon: "🕯️", reserved: false },
-  { id: 11, name: "", icon: "🛋️", reserved: false },
-  {
-    id: 12,
-    name: "Kieliszki do wina",
-    description: "",
-    icon: "🛏️",
-    reserved: false,
-  },
+  { id: 6, name: "Thermomix", icon: "🤖", reserved: false },
+  // { id: 7, name: "", icon: "🧺", reserved: false },
+  // { id: 8, name: "", icon: "🖼️", reserved: false },
+  // { id: 9, name: "", icon: "🪴", reserved: false },
+  // { id: 10, name: "", icon: "🕯️", reserved: false },
+  // { id: 11, name: "", icon: "🛋️", reserved: false },
+  // {
+  //   id: 7,
+  //   name: "Kieliszki do wina",
+  //   description: "",
+  //   icon: "🛏️",
+  //   reserved: false,
+  // },
 ];
 
 type RemoteGift = { id: number; reserved: boolean; password?: string };
@@ -216,7 +215,7 @@ export default function GiftList() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="flex items-center justify-between mb-4">
+      {/* <div className="flex items-center justify-between mb-4">
         <p className="text-sm text-foreground/60">
           Lista aktualizuje się automatycznie co ~15 sekund.
         </p>
@@ -226,7 +225,7 @@ export default function GiftList() {
         >
           Odśwież
         </button>
-      </div>
+      </div> */}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {gifts.map((gift) => (

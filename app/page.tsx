@@ -1,6 +1,7 @@
 "use client";
 
 import GiftList from "./components/GiftList";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,7 +10,15 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-pastel-pink/20 to-cream">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <div className="text-6xl mb-4">💐</div>
+            <div className="mb-4 flex justify-center">
+              <Image
+                src="wedding/kotki.png"
+                alt="Kotki"
+                width={100}
+                height={100}
+                className="object-contain"
+              />
+            </div>
             <h1 className="font-serif text-6xl md:text-8xl text-pastel-rose mb-4 tracking-wide">
               Ola & Kacper
             </h1>
@@ -156,11 +165,7 @@ export default function Home() {
               <p className="text-foreground/70 text-sm">
                 Ze względu na bliską odległość od Krakowa, nocleg w okolicy jest
                 bez problemu dostępny, a w razie potrzeby oczywiście służymy
-                pomocą. <br />
-                Dodatkowo mamy możliwość zarezerwowania kilku pokoi dwuosobowych
-                bezpośrednio w kompleksie Dworku w Tomaszowicach w cenie 419 zł
-                za pokój. Osoby zainteresowane prosimy o kontakt - standardowa
-                cena noclegu jest wyższa.
+                pomocą.
               </p>
             </div>
             <div className="text-center p-6">
@@ -174,9 +179,14 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center p-6">
-              <div className="text-4xl mb-4">🎁</div>
-              <h3 className="font-serif text-xl text-pastel-rose mb-3">...</h3>
-              <p className="text-foreground/70 text-sm">Cos tam cos tam</p>
+              <div className="text-4xl mb-4">📸</div>
+              <h3 className="font-serif text-xl text-pastel-rose mb-3">
+                Fotki
+              </h3>
+              <p className="text-foreground/70 text-sm">
+                Tutaj kiedyś będzie link do wspólnego udostepniania zdjęć :)
+                <br /> Ten sam link znajdziecie przy stolikach na sali weselnej
+              </p>
             </div>
           </div>
         </div>
@@ -192,7 +202,7 @@ export default function Home() {
             Najważniejsze jest dla nas to, że będziecie z nami 🤍 <br />
             Jeśli jednak ktoś z Was zastanawia się co nam podarować,
             przygotowaliśmy pomocniczą listę rzeczy, które z pewnością przydadzą
-            się w nowym mieszkaniu.
+            nam się w nowym mieszkaniu.
           </p>
           <GiftList />
         </div>
@@ -202,7 +212,7 @@ export default function Home() {
       <footer className="py-12 px-4 bg-pastel-rose text-white text-center">
         <p className="text-2xl font-serif mb-2">Ola & Kacper</p>
         <p className="text-sm opacity-90">28.08.2026 • Tomaszowice</p>
-        <p className="text-xs mt-4 opacity-75">
+        <p className="text-sm mt-4 opacity-75">
           Nie możemy się doczekać świętowania z Wami! 💕
         </p>
       </footer>
