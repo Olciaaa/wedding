@@ -140,8 +140,8 @@ export default function Home() {
             <b> 30 maja 2026</b>
           </p>
           <a
-            href="YOUR_GOOGLE_FORM_LINK_HERE"
-            target="https://docs.google.com/forms/d/e/1FAIpQLSfeF_OohqFE59AGbw9b1pWv-q2Dhdhh43VZX-bfOM_y0YkPWg/viewform?usp=sharing&ouid=102320113000128970623"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfeF_OohqFE59AGbw9b1pWv-q2Dhdhh43VZX-bfOM_y0YkPWg/viewform?usp=sharing&ouid=102320113000128970623"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-pastel-rose text-white rounded-full text-lg font-semibold hover:bg-terracotta transition-colors shadow-lg hover:shadow-xl"
           >
