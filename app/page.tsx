@@ -71,7 +71,7 @@ export default function Home() {
                 Kościół św. Piotra i Pawła w Tyńcu
               </p>
               <p className="text-foreground/60 text-sm mb-4">
-                ul. Benedyktyńskan 37, Kraków
+                ul. Benedyktyńska 37, Kraków
               </p>
               <p className="text-lg font-semibold text-pastel-rose">15:00</p>
             </div>
@@ -203,6 +203,9 @@ export default function Home() {
             Jeśli jednak ktoś z Was zastanawia się co nam podarować,
             przygotowaliśmy pomocniczą listę rzeczy, które z pewnością przydadzą
             nam się w nowym mieszkaniu.
+            <br />
+            Zachęcamy do łączenia sił, prezenty wspólne są jak najbardziej mile
+            widziane.
           </p>
           <GiftList />
         </div>
