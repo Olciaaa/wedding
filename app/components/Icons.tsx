@@ -67,7 +67,7 @@ export const Icon = {
       </svg>
     );
   },
-  Hotel({ className = "w-10 h-10 text-green" }: { className?: string }) {
+  Hotel({ className = "w-11 h-11 text-green" }: { className?: string }) {
     return (
       <svg
         viewBox="0 0 128 128"
@@ -82,7 +82,7 @@ export const Icon = {
       </svg>
     );
   },
-  Car({ className = "w-9 h-9 text-green" }: { className?: string }) {
+  Car({ className = "w-10 h-10 text-green" }: { className?: string }) {
     return (
       <svg
         viewBox="-1.5 0 32 32"

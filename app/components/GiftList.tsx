@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import * as Icon from "lucide-react";
 
 interface Gift {
   id: number;
@@ -54,6 +55,24 @@ const initialGifts: Gift[] = [
 ];
 
 type RemoteGift = { id: number; reserved: boolean; password?: string };
+
+// Mapowanie emoji na ikony lucide-react
+function getIconComponent(emoji: string) {
+  const iconMap: Record<
+    string,
+    React.ComponentType<{ className?: string; strokeWidth?: number }>
+  > = {
+    "🍴": Icon.Utensils,
+    "🥤": Icon.CupSoda,
+    "🍷": Icon.Wine,
+    "🥂": Icon.Martini,
+    "🍳": Icon.CookingPot,
+    "🧺": Icon.ShowerHead,
+    "🤖": Icon.Bot,
+    "🧹": Icon.Sparkles,
+  };
+  return iconMap[emoji] || null;
+}
 
 function mergeRemote(prev: Gift[], remote: RemoteGift[]) {
   const map = new Map<number, RemoteGift>();
@@ -227,7 +246,19 @@ export default function GiftList() {
             }`}
             onClick={() => handleReserve(gift)}
           >
-            <div className="text-4xl mb-3 text-center">{gift.icon}</div>
+            <div className="mb-3 flex justify-center">
+              {(() => {
+                const IconComponent = getIconComponent(gift.icon);
+                return IconComponent ? (
+                  <IconComponent
+                    className="w-10 h-10 text-green"
+                    strokeWidth={1}
+                  />
+                ) : (
+                  <span className="text-4xl">{gift.icon}</span>
+                );
+              })()}
+            </div>
             <h3 className="font-serif text-lg text-pastel-rose text-center mb-2">
               {gift.name}
             </h3>
@@ -265,8 +296,18 @@ export default function GiftList() {
             </h3>
 
             <div className="mb-6">
-              <p className="text-lg mb-2">
-                <span className="text-3xl mr-2">{selectedGift.icon}</span>
+              <p className="text-lg mb-2 flex items-center">
+                {(() => {
+                  const IconComponent = getIconComponent(selectedGift.icon);
+                  return IconComponent ? (
+                    <IconComponent
+                      className="w-6 h-6 text-green mr-2"
+                      strokeWidth={1}
+                    />
+                  ) : (
+                    <span className="text-3xl mr-2">{selectedGift.icon}</span>
+                  );
+                })()}
                 {selectedGift.name}
               </p>
               {selectedGift.description && (
@@ -329,8 +370,18 @@ export default function GiftList() {
             </h3>
 
             <div className="mb-6">
-              <p className="text-lg mb-4">
-                <span className="text-3xl mr-2">{selectedGift.icon}</span>
+              <p className="text-lg mb-4 flex items-center">
+                {(() => {
+                  const IconComponent = getIconComponent(selectedGift.icon);
+                  return IconComponent ? (
+                    <IconComponent
+                      className="w-6 h-6 text-green mr-2"
+                      strokeWidth={1}
+                    />
+                  ) : (
+                    <span className="text-3xl mr-2">{selectedGift.icon}</span>
+                  );
+                })()}
                 {selectedGift.name}
               </p>
               <p className="text-sm text-foreground/70 mb-4">
