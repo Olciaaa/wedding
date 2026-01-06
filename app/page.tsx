@@ -3,6 +3,7 @@
 import GiftList from "./components/GiftList";
 import Image from "next/image";
 import { Icon } from "./components/Icons";
+import FadeIn from "./components/FadeIn";
 
 export default function Home() {
   const scheduleIcons = {
@@ -95,47 +96,53 @@ export default function Home() {
       {/* Informacje o ślubie */}
       <section id="szczegoly" className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
-            Szczegóły
-          </h2>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
+              Szczegóły
+            </h2>
+          </FadeIn>
           <div className="grid md:grid-cols-2 gap-12">
             {/* Ceremonia */}
-            <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
-              <div className="text-4xl mb-4">
-                <div className="mb-4 flex justify-center">
-                  <Icon.Church className="w-11 h-11 text-green" />
+            <FadeIn delay={0.1}>
+              <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
+                <div className="text-4xl mb-4">
+                  <div className="mb-4 flex justify-center">
+                    <Icon.Church className="w-11 h-11 text-green" />
+                  </div>
                 </div>
+                <h3 className="font-serif text-2xl text-pastel-rose mb-4">
+                  Ceremonia
+                </h3>
+                <p className="text-foreground/80 font-medium mb-2">
+                  Kościół św. Piotra i Pawła w Tyńcu
+                </p>
+                <p className="text-foreground/60 font-medium text-sm mb-4">
+                  ul. Benedyktyńska 37, Kraków
+                </p>
+                <p className="text-lg font-semibold text-pastel-rose">15:00</p>
               </div>
-              <h3 className="font-serif text-2xl text-pastel-rose mb-4">
-                Ceremonia
-              </h3>
-              <p className="text-foreground/80 font-medium mb-2">
-                Kościół św. Piotra i Pawła w Tyńcu
-              </p>
-              <p className="text-foreground/60 font-medium text-sm mb-4">
-                ul. Benedyktyńska 37, Kraków
-              </p>
-              <p className="text-lg font-semibold text-pastel-rose">15:00</p>
-            </div>
+            </FadeIn>
 
             {/* Wesele */}
-            <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
-              <div className="text-4xl mb-4">
-                <div className="mb-4 flex justify-center">
-                  <Icon.Cheers className="w-10 h-10 text-green" />
+            <FadeIn delay={0.2}>
+              <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
+                <div className="text-4xl mb-4">
+                  <div className="mb-4 flex justify-center">
+                    <Icon.Cheers className="w-10 h-10 text-green" />
+                  </div>
                 </div>
+                <h3 className="font-serif text-2xl text-pastel-rose mb-4">
+                  Wesele
+                </h3>
+                <p className="text-foreground/80 font-medium mb-2">
+                  Dworek w Tomaszowicach
+                </p>
+                <p className="text-foreground/60 font-medium text-sm mb-4">
+                  ul. Parkowa 12, Tomaszowice
+                </p>
+                <p className="text-lg font-semibold text-pastel-rose">17:30</p>
               </div>
-              <h3 className="font-serif text-2xl text-pastel-rose mb-4">
-                Wesele
-              </h3>
-              <p className="text-foreground/80 font-medium mb-2">
-                Dworek w Tomaszowicach
-              </p>
-              <p className="text-foreground/60 font-medium text-sm mb-4">
-                ul. Parkowa 12, Tomaszowice
-              </p>
-              <p className="text-lg font-semibold text-pastel-rose">17:30</p>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -143,9 +150,11 @@ export default function Home() {
       {/* Harmonogram */}
       <section className="py-20 px-4 bg-gradient-to-b from-white to-pastel-pink/10">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
-            Harmonogram
-          </h2>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
+              Harmonogram
+            </h2>
+          </FadeIn>
           <div className="space-y-6">
             {[
               {
@@ -180,23 +189,24 @@ export default function Home() {
                 iconKey: "party" as IconKey,
               },
             ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-6 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="w-10 h-10 flex items-center justify-center">
-                  {(() => {
-                    const Ico = scheduleIcons[item.iconKey];
-                    return <Ico className="w-10 h-10 text-green" />;
-                  })()}
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="flex items-center gap-6 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-10 h-10 flex items-center justify-center">
+                    {(() => {
+                      const Ico = scheduleIcons[item.iconKey];
+                      return <Ico className="w-10 h-10 text-green" />;
+                    })()}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-lg font-semibold text-pastel-rose">
+                      {item.time}
+                    </p>
+                    <p className="text-foreground/80 font-medium">
+                      {item.event}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p className="text-lg font-semibold text-pastel-rose">
-                    {item.time}
-                  </p>
-                  <p className="text-foreground/80 font-medium">{item.event}</p>
-                </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -205,30 +215,39 @@ export default function Home() {
       {/* RSVP */}
       <section className="py-20 px-4 bg-pastel-pink/20">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl text-green mb-8 font-serif">
-            Potwierdzenie obecności
-          </h2>
-          <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
-            Będzie nam niezmiernie miło, jeśli potwierdzisz swoją obecność przed
-            <b> 30 maja 2026</b>
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfeF_OohqFE59AGbw9b1pWv-q2Dhdhh43VZX-bfOM_y0YkPWg/viewform?usp=sharing&ouid=102320113000128970623"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-pastel-rose text-white rounded-full text-lg font-medium hover:bg-terracotta transition-colors shadow-lg hover:shadow-xl"
-          >
-            Potwierdź obecność
-          </a>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl text-green mb-8 font-serif">
+              Potwierdzenie obecności
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
+              Będzie nam niezmiernie miło, jeśli potwierdzisz swoją obecność
+              przed
+              <b> 30 maja 2026</b>
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfeF_OohqFE59AGbw9b1pWv-q2Dhdhh43VZX-bfOM_y0YkPWg/viewform?usp=sharing&ouid=102320113000128970623"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-pastel-rose text-white rounded-full text-lg font-medium hover:bg-terracotta transition-colors shadow-lg hover:shadow-xl"
+            >
+              Potwierdź obecność
+            </a>
+          </FadeIn>
         </div>
       </section>
 
       {/* Dodatkowe informacje */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
-            Praktyczne informacje
-          </h2>
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl text-center text-green mb-16 font-serif">
+              Praktyczne informacje
+            </h2>
+          </FadeIn>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="text-4xl mb-4">
@@ -280,19 +299,25 @@ export default function Home() {
       {/* Lista prezentów */}
       <section className="py-20 px-4 bg-gradient-to-b from-white to-pastel-pink/10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center text-green mb-6 font-serif">
-            Lista prezentów
-          </h2>
-          <p className="text-center text-foreground/70 font-medium mb-12 max-w-2xl mx-auto">
-            Najważniejsze jest dla nas to, że będziecie z nami 🤍 <br />
-            Jeśli jednak ktoś z Was zastanawia się co nam podarować,
-            przygotowaliśmy pomocniczą listę rzeczy, które z pewnością przydadzą
-            nam się w nowym mieszkaniu.
-            <br />
-            Zachęcamy do łączenia sił, prezenty wspólne są jak najbardziej mile
-            widziane.
-          </p>
-          <GiftList />
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl text-center text-green mb-6 font-serif">
+              Lista prezentów
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-center text-foreground/70 font-medium mb-12 max-w-2xl mx-auto">
+              Najważniejsze jest dla nas to, że będziecie z nami 🤍 <br />
+              Jeśli jednak ktoś z Was zastanawia się co nam podarować,
+              przygotowaliśmy pomocniczą listę rzeczy, które z pewnością
+              przydadzą nam się w nowym mieszkaniu.
+              <br />
+              Zachęcamy do łączenia sił, prezenty wspólne są jak najbardziej
+              mile widziane.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <GiftList />
+          </FadeIn>
         </div>
       </section>
 
