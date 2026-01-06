@@ -216,18 +216,6 @@ export default function GiftList() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      {/* <div className="flex items-center justify-between mb-4">
-        <p className="text-sm text-foreground/60">
-          Lista aktualizuje się automatycznie co ~15 sekund.
-        </p>
-        <button
-          onClick={refresh}
-          className="px-4 py-2 rounded-lg border-2 border-pastel-pink/30 hover:border-pastel-rose transition-all"
-        >
-          Odśwież
-        </button>
-      </div> */}
-
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {gifts.map((gift) => (
           <div
@@ -245,7 +233,7 @@ export default function GiftList() {
             </h3>
 
             {gift.description && (
-              <p className="text-sm text-foreground/60 text-center mb-3">
+              <p className="text-sm font-medium text-foreground/60 text-center mb-3">
                 {gift.description}
               </p>
             )}

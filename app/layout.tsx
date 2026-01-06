@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import {
+  Playfair_Display,
+  Spectral,
+  Parisienne,
+  Tangerine,
+  Great_Vibes,
+  Allura,
+} from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -8,10 +15,34 @@ const playfair = Playfair_Display({
   weight: ["400", "700"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
+const spectral = Spectral({
+  variable: "--font-spectral",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["200", "300", "400", "700"],
+});
+
+const parisienne = Parisienne({
+  variable: "--font-parisienne",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const tangerine = Tangerine({
+  variable: "--font-tangerine",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const allura = Allura({
+  variable: "--font-allura",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +57,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${playfair.variable} ${lato.variable} antialiased`}>
+      <body
+        className={`${playfair.variable} ${spectral.variable} ${parisienne.variable} ${tangerine.variable} ${greatVibes.variable} ${allura.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
