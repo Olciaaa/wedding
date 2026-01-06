@@ -185,14 +185,10 @@ export default function Home() {
                 className="flex items-center gap-6 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 flex items-center justify-center">
-                  {item.iconKey ? (
-                    (() => {
-                      const Ico = scheduleIcons[item.iconKey];
-                      return <Ico className="w-10 h-10 text-green" />;
-                    })()
-                  ) : (
-                    <span className="text-3xl">{item.icon}</span>
-                  )}
+                  {(() => {
+                    const Ico = scheduleIcons[item.iconKey];
+                    return <Ico className="w-10 h-10 text-green" />;
+                  })()}
                 </div>
                 <div className="flex-1">
                   <p className="text-lg font-semibold text-pastel-rose">
