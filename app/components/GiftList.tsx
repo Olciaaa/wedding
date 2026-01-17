@@ -41,6 +41,12 @@ const initialGifts: Gift[] = [
   },
   { id: 7, name: "Thermomix", icon: "🤖", reserved: false },
   { id: 8, name: "Rumba", icon: "🧹", reserved: false },
+  {
+    id: 9,
+    name: "Noże kuchenne",
+    icon: "🔪",
+    reserved: false,
+  },
 
   // { id: 9, name: "", icon: "🪴", reserved: false },
   // { id: 10, name: "", icon: "🕯️", reserved: false },
@@ -70,6 +76,7 @@ function getIconComponent(emoji: string) {
     "🧺": Icon.ShowerHead,
     "🤖": Icon.Bot,
     "🧹": Icon.Sparkles,
+    "🔪": Icon.LucideForkKnife,
   };
   return iconMap[emoji] || null;
 }
