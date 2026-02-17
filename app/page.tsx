@@ -101,48 +101,82 @@ export default function Home() {
               Szczegóły
             </h2>
           </FadeIn>
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Ceremonia */}
-            <FadeIn delay={0.1}>
-              <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
-                <div className="text-4xl mb-4">
-                  <div className="mb-4 flex justify-center">
-                    <Icon.Church className="w-11 h-11 text-green" />
+          <div className="space-y-12">
+            {/* Górny rząd: Ceremonia i Wesele */}
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Ceremonia */}
+              <FadeIn delay={0.1}>
+                <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
+                  <div className="text-4xl mb-4">
+                    <div className="mb-4 flex justify-center">
+                      <Icon.Church className="w-11 h-11 text-green" />
+                    </div>
                   </div>
+                  <h3 className="font-serif text-2xl text-pastel-rose mb-4">
+                    Ceremonia
+                  </h3>
+                  <p className="text-foreground/80 font-medium mb-2">
+                    Kościół św. Piotra i Pawła w Tyńcu
+                  </p>
+                  <p className="text-foreground/60 font-medium text-sm mb-4">
+                    ul. Benedyktyńska 37, Kraków
+                  </p>
+                  <p className="text-lg font-semibold text-pastel-rose">
+                    15:00
+                  </p>
                 </div>
-                <h3 className="font-serif text-2xl text-pastel-rose mb-4">
-                  Ceremonia
-                </h3>
-                <p className="text-foreground/80 font-medium mb-2">
-                  Kościół św. Piotra i Pawła w Tyńcu
-                </p>
-                <p className="text-foreground/60 font-medium text-sm mb-4">
-                  ul. Benedyktyńska 37, Kraków
-                </p>
-                <p className="text-lg font-semibold text-pastel-rose">15:00</p>
-              </div>
-            </FadeIn>
+              </FadeIn>
 
-            {/* Wesele */}
-            <FadeIn delay={0.2}>
-              <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
-                <div className="text-4xl mb-4">
-                  <div className="mb-4 flex justify-center">
-                    <Icon.Cheers className="w-10 h-10 text-green" />
+              {/* Wesele */}
+              <FadeIn delay={0.2}>
+                <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
+                  <div className="text-4xl mb-4">
+                    <div className="mb-4 flex justify-center">
+                      <Icon.Cheers className="w-10 h-10 text-green" />
+                    </div>
                   </div>
+                  <h3 className="font-serif text-2xl text-pastel-rose mb-4">
+                    Wesele
+                  </h3>
+                  <p className="text-foreground/80 font-medium mb-2">
+                    Dworek w Tomaszowicach
+                  </p>
+                  <p className="text-foreground/60 font-medium text-sm mb-4">
+                    ul. Parkowa 12, Tomaszowice
+                  </p>
+                  <p className="text-lg font-semibold text-pastel-rose">
+                    17:30
+                  </p>
                 </div>
-                <h3 className="font-serif text-2xl text-pastel-rose mb-4">
-                  Wesele
-                </h3>
-                <p className="text-foreground/80 font-medium mb-2">
-                  Dworek w Tomaszowicach
-                </p>
-                <p className="text-foreground/60 font-medium text-sm mb-4">
-                  ul. Parkowa 12, Tomaszowice
-                </p>
-                <p className="text-lg font-semibold text-pastel-rose">17:30</p>
+              </FadeIn>
+            </div>
+
+            {/* Dolny rząd: Poprawiny wyśrodkowane */}
+            <div className="flex justify-center">
+              <div className="w-full md:w-1/2 md:px-6">
+                <FadeIn delay={0.3}>
+                  <div className="text-center p-8 rounded-lg bg-cream/50 border-2 border-pastel-pink/30">
+                    <div className="text-4xl mb-4">
+                      <div className="mb-4 flex justify-center">
+                        <Icon.Cheers className="w-10 h-10 text-green" />
+                      </div>
+                    </div>
+                    <h3 className="font-serif text-2xl text-pastel-rose mb-4">
+                      Poprawiny
+                    </h3>
+                    <p className="text-foreground/80 font-medium mb-2">
+                      Dworek w Tomaszowicach
+                    </p>
+                    <p className="text-foreground/60 font-medium text-sm mb-4">
+                      ul. Parkowa 12, Tomaszowice
+                    </p>
+                    <p className="text-lg font-semibold text-pastel-rose">
+                      29.08.2026 13:00
+                    </p>
+                  </div>
+                </FadeIn>
               </div>
-            </FadeIn>
+            </div>
           </div>
         </div>
       </section>
