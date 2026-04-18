@@ -139,13 +139,14 @@ export default function Home() {
                     Wesele
                   </h3>
                   <p className="text-foreground/80 font-medium mb-2">
-                    Dworek w Tomaszowicach
+                    Oranżeria <br />
+                    Dwór w Tomaszowicach
                   </p>
                   <p className="text-foreground/60 font-medium text-sm mb-4">
                     ul. Parkowa 12, Tomaszowice
                   </p>
                   <p className="text-lg font-semibold text-pastel-rose">
-                    17:30
+                    17:00
                   </p>
                 </div>
               </FadeIn>
@@ -165,7 +166,9 @@ export default function Home() {
                       Poprawiny
                     </h3>
                     <p className="text-foreground/80 font-medium mb-2">
-                      Dworek w Tomaszowicach
+                      Restauracja Nowy Spichlerz
+                      <br />
+                      Dwór w Tomaszowicach
                     </p>
                     <p className="text-foreground/60 font-medium text-sm mb-4">
                       ul. Parkowa 12, Tomaszowice
@@ -201,16 +204,20 @@ export default function Home() {
                 event: "Grupowa sesja zdjęciowa",
                 iconKey: "camera" as IconKey,
               },
-              { time: "16:30", event: "Życzenia", iconKey: "heart" as IconKey },
               {
-                time: "17:30",
+                time: "17:00",
                 event: "Powitanie i toast",
                 iconKey: "cheers" as const,
               },
               {
-                time: "18:00",
+                time: "17:30",
                 event: "Obiad weselny",
                 iconKey: "dinner" as IconKey,
+              },
+              {
+                time: "18:15",
+                event: "Deser i życzenia",
+                iconKey: "heart" as IconKey,
               },
               {
                 time: "19:00",

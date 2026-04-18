@@ -17,7 +17,13 @@ const API_URL =
 
 const initialGifts: Gift[] = [
   { id: 1, name: "Zestaw sztućców", icon: "🍴", reserved: false },
-  { id: 2, name: "Blender", description: "", icon: "🥤", reserved: false },
+  {
+    id: 2,
+    name: "Blender",
+    description: "kielichowy",
+    icon: "🥤",
+    reserved: false,
+  },
   {
     id: 3,
     name: "Kieliszki do wina",
@@ -47,7 +53,6 @@ const initialGifts: Gift[] = [
     icon: "🔪",
     reserved: false,
   },
-
   // { id: 9, name: "", icon: "🪴", reserved: false },
   // { id: 10, name: "", icon: "🕯️", reserved: false },
   // { id: 11, name: "", icon: "🛋️", reserved: false },
