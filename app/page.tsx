@@ -166,7 +166,7 @@ export default function Home() {
                       Poprawiny
                     </h3>
                     <p className="text-foreground/80 font-medium mb-2">
-                      Restauracja Nowy Spichlerz
+                      Galeria Panorama
                       <br />
                       Dwór w Tomaszowicach
                     </p>
