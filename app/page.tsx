@@ -265,7 +265,7 @@ export default function Home() {
             <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
               Będzie nam niezmiernie miło, jeśli potwierdzisz swoją obecność
               przed
-              <b> 30 maja 2026</b>
+              <b> 17 lipca 2026</b>
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
